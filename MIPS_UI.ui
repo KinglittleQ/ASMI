@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>797</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(62, 62, 62);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+	background-color : rgb(39, 40, 34); 
+	color : rgb(252, 255, 255); 
+}
+
+QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	background-color: rgb(58, 58, 58);
+	font: 8pt &quot;Consolas&quot;;
+}
+
+QPushButton:hover {
+	background-color: rgb(70, 70, 70);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+</string>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>901</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>901</width>
+      <height>621</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>901</width>
+      <height>621</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disassembler&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget {
+	background-color : rgb(39, 40, 34); 
+}
+
+QTabWidget::pane { border: 0; }
+
+QTabBar::tab{
+	min-height: 20px; 
+	min-width: 100px;
+	background-color: rgb(71, 71, 71);
+	font: 8pt &quot;Consolas&quot;;
+}
+
+QTabBar::tab::selected {
+	background-color: rgb(102, 102, 102);
+}
+
+QTabBar::tab::hover {
+	background-color: rgb(90, 90, 90);
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Assembler">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab{min-height: 30px; min-width: 80px;}</string>
+     </property>
+     <attribute name="title">
+      <string>Assembler</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Assembler</string>
+     </attribute>
+     <attribute name="whatsThis">
+      <string>Assembler</string>
+     </attribute>
+     <widget class="QPushButton" name="saveMIPS">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>60</y>
+        <width>101</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save MIPS</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+S</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	background-color: rgb(58, 58, 58);
+}
+
+QPushButton:hover {
+	background-color: rgb(70, 70, 70);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+O</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveCoe">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>20</y>
+        <width>101</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	background-color: rgb(58, 58, 58);
+}
+
+QPushButton:hover {
+	background-color: rgb(70, 70, 70);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Save COE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="compile">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>60</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Compile</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+B</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveBin">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>20</y>
+        <width>111</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save bin</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="editor">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>341</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+	background-color : rgb(39, 40, 34); 
+	color : rgb(252, 255, 255); 
+	font: &quot;Consolas&quot;;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveMIPSas">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>60</y>
+        <width>111</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save MIPS as</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+Shift+S</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="textList2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>110</y>
+        <width>261</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+	background-color : rgb(39, 40, 34); 
+	color : rgb(252, 255, 255); 
+	font: &quot;Consolas&quot;;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="debugMode">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>30</y>
+        <width>97</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	background-color: rgb(58, 58, 58);
+}
+
+QPushButton:hover {
+	background-color: rgb(70, 70, 70);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Debug Mode</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+R</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Disassembler">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <attribute name="title">
+      <string>Disassembler</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Disassembler</string>
+     </attribute>
+     <attribute name="whatsThis">
+      <string>Disassembler</string>
+     </attribute>
+     <widget class="QTextEdit" name="binEditor">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>341</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+	background-color : rgb(39, 40, 34); 
+	color : rgb(252, 255, 255); 
+	font: &quot;Consolas&quot;;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="mipsCode">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>110</y>
+        <width>261</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+	background-color : rgb(39, 40, 34); 
+	color : rgb(252, 255, 255); 
+	font: &quot;Consolas&quot;;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+O</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveBin2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>60</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save Bin</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveMIPS2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>20</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save MIPS</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+Shift+S</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="compile2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>60</y>
+        <width>97</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Compile</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+B</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>0</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 0px;
+	background-color: rgb(58, 58, 58);
+}
+
+QPushButton:hover {
+	background-color: rgb(70, 70, 70);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="miniButton">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>0</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 0px;
+	background-color: rgb(58, 58, 58);
+}
+
+QPushButton:hover {
+	background-color: rgb(70, 70, 70);
+
+}
+
+QPushButton:pressed {
+	background-color: rgb(220, 220, 220);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>—</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>7</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 12pt &quot;Consolas&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>MIPS Editor</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
