@@ -10,11 +10,11 @@ Author: 邓成杞
 
 ## 总体界面
 
-![01](D:\course\ComputerOrganization\MIPS\01.png)
+![01](pic\01.png)
 
 ## 一、汇编器
 
-![01](D:\course\ComputerOrganization\MIPS\03.png)
+![01](pic\03.png)
 
 ### 1) 支持MIPS指令：
 
@@ -37,7 +37,7 @@ Author: 邓成杞
 
 - 支持实时编辑，可以直接在代码框内编辑，点击Compile(Ctrl + B)显示编译结果
 
-![01](D:\course\ComputerOrganization\MIPS\04.png)
+![01](pic\04.png)
 
 -  支持代码块语法高亮
 
@@ -49,7 +49,7 @@ Author: 邓成杞
 
 ## 二、反汇编器
 
-![01](D:\course\ComputerOrganization\MIPS\05.png)
+![01](pic\05.png)
 
 ### 1）支持MIPS指令
 
@@ -71,20 +71,20 @@ Author: 邓成杞
 
 ##  三、调试模式
 
-![01](D:\course\ComputerOrganization\MIPS\06.png)
+![01](pic\06.png)
 
 ### 1) Step —— 单步运行
   从第一行开始运行，下一步要执行的指令会用蓝色底色高亮出来，右侧为寄存器的值。
 
-![01](D:\course\ComputerOrganization\MIPS\07.png)
+![01](pic\07.png)
 
 - 支持跳转指令
 
-![01](D:\course\ComputerOrganization\MIPS\08.png)
+![01](pic\08.png)
 
-![01](D:\course\ComputerOrganization\MIPS\09.png)
+![01](pic\09.png)
 
 ### 2) Reset —— 重置运行状态和寄存器的值
 
-![01](D:\course\ComputerOrganization\MIPS\10.png)
+![01](pic\10.png)
 
