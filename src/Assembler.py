@@ -76,6 +76,8 @@ def assembler(lines):
     for i, line in enumerate(lines):
         tokens, t = split(line)
 
+        # print(t)
+
         if t != Type.Addr and t != Type.Label and t != Type.Others:
             line_table[n] = i
             n = n + 1
@@ -102,8 +104,8 @@ def assembler(lines):
         elif t == Type.R2:  # shift  sll, srl
             opcode = opcodes(tokens[0])
             rs = 5 * '0'
-            rt = registers(tokens[1])
-            rd = registers(tokens[2])
+            rd = registers(tokens[1])
+            rt = registers(tokens[2])
             shamt = to_bin(tokens[3], 5)
             func = funcs(tokens[0])
             code = opcode + rs + rt + rd + shamt + func
