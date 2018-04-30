@@ -1,6 +1,6 @@
 ---
 Title: A Simple MIPS IDE
-Author: 邓成杞
+Author: KQ
 ---
 
 
