@@ -227,4 +227,10 @@ def bin2int(bin, signed=False):
 
 
 if __name__ == '__main__':
-    print(to_bin(8, 32, True))
+    from Disassembler import disassembler
+    inst = int('1172000a', 16)
+    inst = to_bin(inst, 32)
+    print(inst)
+    print(disassembler([inst]))
+
+

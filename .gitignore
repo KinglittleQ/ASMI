@@ -3,3 +3,5 @@
 mips_code/
 readme.pdf
 executable/MIPS.exe
+*.spec
+src/COE.py
